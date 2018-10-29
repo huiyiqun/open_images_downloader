@@ -14,6 +14,9 @@ RUN mkdir ~/.sbt/ && ln -sf /opt/sbt/sbt/lib/local-preloaded/ ~/.sbt/preloaded
 # dependencies of sbt
 RUN apk add bash bc
 
+# dependencies of open_images_downloader
+RUN apk add imagemagick
+
 COPY . /open_images_downloader/
 WORKDIR /open_images_downloader
 
